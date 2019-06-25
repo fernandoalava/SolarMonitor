@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { StyledContainer, StyledSection } from "./dashboard.styles";
 import { fetchCloudData, fetchSolarData } from "../../helpers/api";
-import { apiRefreshRate } from "../../config";
+import config from "../../config";
+import SolarActivity from "../../components/SolarActivity";
 
 import { withSnackbar } from "notistack";
 
@@ -23,11 +24,11 @@ const DashBoardScreen = props => {
   useEffect(() => {
     let cloudCoverageInterval = setInterval(
       () => fetchCloudData(setCloudCoverage, errorHandler),
-      apiRefreshRate
+      config.apiRefreshRate
     );
     let solarActivityInterval = setInterval(
       () => fetchSolarData(setSolarActivity, errorHandler),
-      apiRefreshRate
+      config.apiRefreshRate
     );
     return () => {
       clearInterval(cloudCoverageInterval);
@@ -36,7 +37,9 @@ const DashBoardScreen = props => {
   }, [solarActivity, cloudCoverage, errorHandler]);
   return (
     <StyledSection>
-      <StyledContainer maxWidth="lg">Gato</StyledContainer>
+      <StyledContainer maxWidth="lg">
+        <SolarActivity />
+      </StyledContainer>
     </StyledSection>
   );
 };

@@ -3,4 +3,6 @@ import Container from "@material-ui/core/Container";
 
 export const StyledSection = styled.section``;
 
-export const StyledContainer = styled(Container)``;
+export const StyledContainer = styled(Container)`
+  padding: 20px;
+`;
