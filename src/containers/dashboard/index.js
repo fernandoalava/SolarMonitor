@@ -3,12 +3,13 @@ import { StyledContainer, StyledSection } from "./dashboard.styles";
 import { fetchCloudData, fetchSolarData } from "../../helpers/api";
 import config from "../../config";
 import SolarActivity from "../../components/SolarActivity";
+import CloudCoverage from "../../components/CloudCoverage";
 
 import { withSnackbar } from "notistack";
 
 const DashBoardScreen = props => {
-  const [cloudCoverage, setCloudCoverage] = useState(null);
-  const [solarActivity, setSolarActivity] = useState(null);
+  const [cloudCoverage, setCloudCoverage] = useState([]);
+  const [solarActivity, setSolarActivity] = useState([]);
   const { enqueueSnackbar } = props;
 
   const errorHandler = useCallback(
@@ -38,7 +39,8 @@ const DashBoardScreen = props => {
   return (
     <StyledSection>
       <StyledContainer maxWidth="lg">
-        <SolarActivity />
+        <SolarActivity activity={solarActivity} />
+        <CloudCoverage activity={cloudCoverage} />
       </StyledContainer>
     </StyledSection>
   );

@@ -4,18 +4,18 @@ import PropTypes from "prop-types";
 import * as moment from "moment";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-export const SolarActivity = props => {
+export const CloudCoverage = props => {
   const { activity } = props;
   const now = moment();
   const next24hours = moment().add(24, "hours");
-  let data = [["Time", "kW"]];
+  let data = [["Time", "%"]];
 
   props.activity
     .filter(item => moment(item.axes.time).isBetween(now, next24hours))
     .map(item =>
       data.push([
         moment(item.axes.time).format("HH:mm"),
-        Math.floor(item.data.av_swsfcdown)
+        Math.floor(item.data.av_ttl_cld * 100)
       ])
     );
 
@@ -28,10 +28,10 @@ export const SolarActivity = props => {
       data={data}
       options={{
         hAxis: {
-          title: "Visible Diffuse Downward Solar Flux"
+          title: "Sky Cloud Coverage"
         },
         vAxis: {
-          title: "kW"
+          title: "%"
         }
       }}
       rootProps={{ "data-testid": "1" }}
@@ -41,12 +41,12 @@ export const SolarActivity = props => {
   );
 };
 
-SolarActivity.propTypes = {
+CloudCoverage.propTypes = {
   activity: PropTypes.array.isRequired
 };
 
-SolarActivity.defaultProps = {
+CloudCoverage.defaultProps = {
   activity: []
 };
 
-export default SolarActivity;
+export default CloudCoverage;
