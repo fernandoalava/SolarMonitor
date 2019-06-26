@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 
 import { withSnackbar } from "notistack";
 
-const DashBoardScreen = props => {
+export const DashBoardScreen = props => {
   const [cloudCoverage, setCloudCoverage] = useState([]);
   const [solarActivity, setSolarActivity] = useState([]);
   const [panelsInfo, setPanelsInfo] = useState([]);

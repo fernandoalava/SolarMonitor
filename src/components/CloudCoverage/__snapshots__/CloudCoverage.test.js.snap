@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CloudCoverage Renders correctly with data 1`] = `
+<AreaChart
+  barCategoryGap="10%"
+  barGap={4}
+  data={
+    Array [
+      Object {
+        "sky_clarity": 98,
+        "time": "18:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "21:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "00:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "03:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "06:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "09:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "12:00",
+      },
+      Object {
+        "sky_clarity": 100,
+        "time": "15:00",
+      },
+    ]
+  }
+  height={150}
+  layout="horizontal"
+  margin={
+    Object {
+      "bottom": 5,
+      "left": 20,
+      "right": 30,
+      "top": 5,
+    }
+  }
+  reverseStackOrder={false}
+  stackOffset="none"
+  width={500}
+>
+  <CartesianGrid
+    fill="none"
+    horizontal={true}
+    horizontalFill={Array []}
+    horizontalPoints={Array []}
+    stroke="#ccc"
+    strokeDasharray="3 3"
+    vertical={true}
+    verticalFill={Array []}
+    verticalPoints={Array []}
+  />
+  <XAxis
+    allowDataOverflow={false}
+    allowDecimals={true}
+    allowDuplicatedCategory={true}
+    dataKey="time"
+    domain={
+      Array [
+        0,
+        "auto",
+      ]
+    }
+    height={30}
+    hide={false}
+    mirror={false}
+    orientation="bottom"
+    padding={
+      Object {
+        "left": 0,
+        "right": 0,
+      }
+    }
+    reversed={false}
+    scale="auto"
+    tickCount={5}
+    type="category"
+    width={0}
+    xAxisId={0}
+  />
+  <YAxis
+    allowDataOverflow={false}
+    allowDecimals={true}
+    allowDuplicatedCategory={true}
+    dataKey="sky_clarity"
+    domain={
+      Array [
+        0,
+        "auto",
+      ]
+    }
+    height={0}
+    hide={false}
+    mirror={false}
+    orientation="left"
+    padding={
+      Object {
+        "bottom": 0,
+        "top": 0,
+      }
+    }
+    reversed={false}
+    scale="auto"
+    tickCount={5}
+    type="number"
+    width={60}
+    yAxisId={0}
+  />
+  <Tooltip
+    active={false}
+    animationDuration={400}
+    animationEasing="ease"
+    contentStyle={Object {}}
+    coordinate={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    cursor={true}
+    cursorStyle={Object {}}
+    filterNull={true}
+    isAnimationActive={true}
+    itemStyle={Object {}}
+    labelStyle={Object {}}
+    offset={10}
+    separator=" : "
+    useTranslate3d={false}
+    viewBox={
+      Object {
+        "x1": 0,
+        "x2": 0,
+        "y1": 0,
+        "y2": 0,
+      }
+    }
+    wrapperStyle={Object {}}
+  />
+  <Legend
+    align="center"
+    iconSize={14}
+    layout="horizontal"
+    verticalAlign="bottom"
+  />
+  <Area
+    activeDot={
+      Object {
+        "r": 8,
+      }
+    }
+    animationBegin={0}
+    animationDuration={1500}
+    animationEasing="ease"
+    connectNulls={false}
+    dataKey="sky_clarity"
+    dot={false}
+    fill="#3182bd"
+    fillOpacity={0.6}
+    hide={false}
+    isAnimationActive={true}
+    legendType="line"
+    name="% Sky Clarity"
+    points={Array []}
+    stroke="#8884d8"
+    type="monotone"
+    xAxisId={0}
+    yAxisId={0}
+  />
+</AreaChart>
+`;
+
+exports[`CloudCoverage Renders correctly without data 1`] = `<WithStyles(ForwardRef(CircularProgress)) />`;

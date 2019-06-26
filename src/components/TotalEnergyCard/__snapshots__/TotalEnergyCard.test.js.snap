@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TotalEnergyCard Renders correctly with data 1`] = `
+<Styled(WithStyles(ForwardRef(Card)))>
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      component="h2"
+      variant="h5"
+    >
+      Total Energy
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+      variant="h3"
+    >
+      119.77
+       kW
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(CardContent))>
+</Styled(WithStyles(ForwardRef(Card)))>
+`;
+
+exports[`TotalEnergyCard Renders correctly without data 1`] = `
+<Styled(WithStyles(ForwardRef(Card)))>
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      component="h2"
+      variant="h5"
+    >
+      Total Energy
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+      variant="h3"
+    >
+      0.00
+       kW
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(CardContent))>
+</Styled(WithStyles(ForwardRef(Card)))>
+`;
