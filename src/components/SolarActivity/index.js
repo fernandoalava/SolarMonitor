@@ -28,7 +28,7 @@ export const SolarActivity = props => {
   return activity.length >= 1 ? (
     <LineChart
       width={500}
-      height={200}
+      height={150}
       data={data}
       margin={{
         top: 5,

@@ -27,7 +27,7 @@ export const CloudCoverage = props => {
   return activity.length >= 1 ? (
     <AreaChart
       width={500}
-      height={200}
+      height={150}
       data={data}
       margin={{
         top: 5,
