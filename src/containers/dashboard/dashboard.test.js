@@ -1,11 +1,6 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 import { DashBoardScreen } from ".";
-import { mockPanelsData } from "../../helpers";
-
-jest.mock("../../helpers");
-const { getPanelsInfo } = require("../../helpers");
-getPanelsInfo.mockImplementation(() => mockPanelsData);
 
 describe("Dashboard", () => {
   it("Renders correctly", () => {
