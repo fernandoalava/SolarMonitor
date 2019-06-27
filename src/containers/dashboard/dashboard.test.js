@@ -7,8 +7,6 @@ jest.mock("../../helpers");
 const { getPanelsInfo } = require("../../helpers");
 getPanelsInfo.mockImplementation(() => mockPanelsData);
 
-jest.useFakeTimers();
-
 describe("Dashboard", () => {
   it("Renders correctly", () => {
     const wrapper = shallow(<DashBoardScreen />);
