@@ -1,8 +1,13 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 import SolarActivity from ".";
-import moment from "moment";
 import { solarActivityDataset } from "../../helpers/index";
+
+jest.mock("moment", () => () => ({
+  format: () => "2018–01–30T12:34:56+00:00",
+  add: () => "2018–01–30T12:34:56+00:00",
+  isBetween: () => "2018–01–30T12:34:56+00:00"
+}));
 
 describe("SolarActivity", () => {
   it("Renders correctly without data", () => {
